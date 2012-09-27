@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Meta Data-->
+		<meta name="description" content="Description of site, as would appear in search result">
+		<meta name="author" content="Chris Shilts">
+		<meta name="keywords" content="">
+		<meta charset="utf-8">
+		<!--Mobile Compatibility-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!--IE9 Compatability-->
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<!--css-->
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="styleblue.css">
+		<link href='http://fonts.googleapis.com/css?family=Diplomata+SC' rel='stylesheet' type='text/css'>
+		
+		<!-- IE8 Compatability (creates HTML5 Elements via JavaScript) -->
+		<script type="text/javascript">
+		 document.createElement('header');
+		 document.createElement('hgroup');
+		 document.createElement('nav');
+		 document.createElement('menu');
+		 document.createElement('section');
+		 document.createElement('article');
+		 document.createElement('aside');
+		 document.createElement('footer');
+		</script>
+		<!--Title-->
+		<title>Style Blue Home</title>
+	</head>
+	<body id="home">
+		<!--Contains all content-->
+		<div id="container">
+			<!--Content at start of page, generally the same-->
+			<header>
+				<div id="logo">
+				Style Blue
+				</div>
+				<!--Primary Navigation-->
+				<nav>
+				<!-- Notice each link has an id, this corresponds to the body- if they match, the link's appearence is changed with CSS-->
+				<a href="index.html" id="home-nav">Style Blue</a>
+				<a href="link-demo.html" id="link-demo-nav">Link Demo</a>
+				<!-- Mobile friendly drop-down menu, initiated via Media Queries -->
+				<select name="forma" ONCHANGE="location = this.options[this.selectedIndex].value;"> 
+					<option value="" selected="selected">Select</option> 
+					<option value="index.html">Style Blue</option>
+					<option value="link-demo.html">Link Demo</option>
+				</select>
+				</nav>
+			</header>
+			<span id="inner-wrapper">
+				<article>
+					<p>
+					This is a html5 template created by <a href="http://chrisshilts.com" alt="Chris Shilts Website">Chris Shilts</a>, called Style Blue. It features a responsive, mobile-first design. Go ahead and resize the window.
+					</p>
+					<p>
+						<img src="images/catseyenebula.jpg" alt="Cats Eye Nebula"> Notice how the image resizes automatically, to fit the screen. This is achieved by giving images a max-width of 100%.
+					</p>
+					<p>
+						Of course, we also need to take into consideration other content, such as videos. Take the following Youtube video for example. 
+						You might think it would be as simple as applying a width of 100% to iframe. But in actuality it's abit more complicated (see source code).
+					</p>
+					<p>	Would you like to try my template out? It's my gift to the world, absolutely free under the <a href="license.txt" alt="GNU">GNU General Public license. </a> 	
+						
+					<p>	<!-- video-container parent element for videos, makes responsive iframe video resizing possible see corrosponding CSS for details -->
+						<div class="video-container">
+						<!-- The Youtube Video, note width and height are unneccesary, as this is specified within the style-sheet.-->
+						<iframe src="http://www.youtube.com/embed/0IBAUHsLUg4" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</p>
+				</article>
+				<!--First Footer-->
+				<footer id="footer-one">
+				Style Blue Template by <a href = "http://www.chrisshilts.com">Chris Shilts</a>
+				</footer>
+			</span>
+			<!--Second Footer-->
+			<footer id="footer-two">
+				<a href="http://www.w3.org/html/logo/">
+				<img id="html5" src="http://www.w3.org/html/logo/badge/html5-badge-h-css3.png" alt="HTML5 Powered with CSS3 / Styling" title="HTML5 Powered with CSS3 / Styling">
+				</a>
+			</footer>
+		<!--/container-->
+		</div>
+	</body>
+</html>

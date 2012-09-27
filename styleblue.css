@@ -1,0 +1,206 @@
+/*	Table of Contents
+	HTML Styling
+	Elements by Alphabetical order
+	Media Queries
+*/
+/* HTML Styling */
+body{
+	background:url(images/solid.png) fixed;
+	background-repeat: repeat;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 1em;
+}
+/* max-width makes images and HTML5 videos responsive */
+img,
+video{
+	max-width: 100%;
+}
+/* Clear Float trick, prevents floated elements from breaking out of their parent containers */
+article,
+#container,
+#logo,
+footer{
+	overflow: hidden;
+}
+article,
+#footer-one,
+#logo{
+	border-radius: 5px;
+	padding: 14px;
+}
+article{
+	background-color: #B0E2FF;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-top-left-radius: 0px;
+	font-size: 1.1em;
+}
+article h3{
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+article img, 
+.video-container{
+	box-shadow: 7px 7px 10px #0D0D0D;
+	display: block;
+	margin: 10px 15px 20px 0px;
+}
+article li{
+	list-style: square;
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+article p{
+	margin-bottom: 10px;
+}
+/* If you want a contact form, please use these properties */
+#contact-form{
+	display: block;
+	margin: auto;
+	overflow: hidden;
+}
+/* parent element to all content, helps position and size elements */
+#container{
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 0px 5% 0px 5%;
+}
+#footer-one{
+	background-color: #6495ED;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	font-size: 1.2em;
+	text-align: center;
+}
+#footer-one a{
+	color: black;
+}
+#footer-one a:hover{
+	color: #7A378B;
+}
+#footer-two{
+	margin-top: 15px;
+}
+#inner-wrapper,
+#logo,
+input,
+textarea{
+	box-shadow:  5px 5px 10px 0px black;
+}
+/* used for consistent box-shadows */
+#inner-wrapper{
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px;
+	display: block;
+	overflow: hidden;
+}
+input,
+textarea{
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+}
+label{
+	display: inline-block;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+#logo{
+	background-color: #6495ED;
+	font-family: 'Diplomata SC', cursive;
+	font-size: 24px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+nav{
+	margin: 0px 10px 4px 0px;
+}
+nav a{
+	background-color: #6495ED;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	color: black;
+	font-size: 1.3em;
+	padding: 5px 5px 3px 5px;
+	text-decoration: none;
+}
+nav a:hover{
+	background-color: #B0E2FF;
+}
+/* mobile friendly drop-down menu is disabled by default */
+nav select {
+  display: none;
+}
+/* By pairing the body id to the navigation id, we can change the current page link's appearence.  */
+#home #home-nav,
+#link-demo #link-demo-nav{
+	background-color: #B0E2FF;
+}
+.submit:hover{
+	background-color: #E5E5E5;
+}
+
+.video-container {
+	clear: both;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* MEDIA QUERIES*/
+
+/* for mobile devices, we want our images to not take up the entire screen. */
+@media only screen 
+and (max-width : 767px){
+	article img{
+	float: left;
+	max-width: 45%;
+	}
+}
+@media only screen 
+and (min-width : 768px){
+	article img{
+	float: left;
+	max-width: 370px;
+	}
+	#contact article img{
+		float: left;
+		margin-right: 10px;
+	}
+}
+/* Disables desktop navigation, enables mobile friendly drop-down menu. */
+@media (max-width: 960px) {
+	article{
+		border-top-left-radius: 5px;
+	}
+	nav a{
+		display: none;
+	}
+	nav select{
+		display: inline-block;
+		font-size: 1.2em;
+		margin-bottom: 10px;
+		}
+}
+@media only screen 
+and (min-width : 1000px){
+	#container{
+		max-width: 1000px;
+		margin: 20px auto 20px auto;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
